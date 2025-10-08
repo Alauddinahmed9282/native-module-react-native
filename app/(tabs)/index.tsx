@@ -20,7 +20,7 @@ const HomeScreen = () => {
       setIsLoading(true);
       setLoginResult(null);
 
-      const result = await LoginModule.showLoginScreen();
+      // const result = await LoginModule.showLoginScreen();
       setLoginResult(result);
 
       if (result.success) {
@@ -44,7 +44,7 @@ const HomeScreen = () => {
   };
 
   const checkSupport = async () => {
-    const supported = await LoginModule.isLoginSupported();
+    // const supported = await LoginModule.isLoginSupported();
     Alert.alert("Support Check", `Native login supported: ${supported}`);
   };
 
