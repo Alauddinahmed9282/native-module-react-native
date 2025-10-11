@@ -17,7 +17,7 @@ public class MyNativeModules extends ReactContextBaseJavaModule {
 
     @NonNull
     @Override
-    public String getName() {
+    public String getName() {  
         return "LoginModule";
     }
 
@@ -26,6 +26,8 @@ public class MyNativeModules extends ReactContextBaseJavaModule {
         Intent i = new Intent(getCurrentActivity(), LoginActivity.class);
         getCurrentActivity().startActivity(i);
     }
+
+    @ReactMethod // Add this annotation
     public void  showSignupScreen(){
         Intent i = new Intent(getCurrentActivity(), SignupActivity.class);
         getCurrentActivity().startActivity(i);

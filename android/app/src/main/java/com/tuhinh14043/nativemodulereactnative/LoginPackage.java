@@ -14,11 +14,11 @@ import java.util.List;
 public class LoginPackage implements ReactPackage {
     @NonNull
     @Override
-    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactApplicationContext) {
+    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
         List<NativeModule> list = new ArrayList<>();
-        list.add(new MyNativeModules(reactApplicationContext));
+        list.add(new MyNativeModules(reactContext));
         return list;
-    }
+    } 
 
     @NonNull
     @Override
