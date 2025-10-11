@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alert,
   NativeModules,
   StyleSheet,
   Text,
@@ -7,9 +8,9 @@ import {
   View,
 } from "react-native";
 
-const HomeScreen = () => {
-  const { LoginModule } = NativeModules;
+const { SignUpModule } = NativeModules;
 
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Home Screen</Text>
@@ -19,7 +20,9 @@ const HomeScreen = () => {
         <TouchableOpacity
           style={[styles.button, styles.button1]}
           onPress={() => {
-            LoginModule.showLoginScreen();
+            SignUpModule.openSignUpScreen((name: string, email: string) => {
+              Alert.alert("User Info", `Name: ${name}\nEmail: ${email}`);
+            });
           }}
         >
           <Text style={styles.buttonText}>Native Login Screen</Text>
@@ -28,7 +31,9 @@ const HomeScreen = () => {
         <TouchableOpacity
           style={[styles.button, styles.button2]}
           onPress={() => {
-            LoginModule.showSignupScreen();
+            SignUpModule.openSignUpScreen((name: string, email: string) => {
+              Alert.alert("User Info", `Name: ${name}\nEmail: ${email}`);
+            });
           }}
         >
           <Text style={styles.buttonText}>Native Signup Screen</Text>

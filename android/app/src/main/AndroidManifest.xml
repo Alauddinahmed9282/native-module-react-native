@@ -28,7 +28,8 @@
         <data android:scheme="exp+native-module-react-native"/>
       </intent-filter>
     </activity>
-    <activity android:name=".LoginActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:screenOrientation="portrait"/>
-    <activity android:name=".SignupActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:screenOrientation="portrait"/>
+<!--    <activity android:name=".LoginActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:screenOrientation="portrait"/>-->
+<!--    <activity android:name=".SignupActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" android:screenOrientation="portrait"/>-->
+    <activity android:name=".SignUpActivity"  android:exported="false"/>
   </application>
 </manifest>

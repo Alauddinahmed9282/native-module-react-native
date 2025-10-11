@@ -11,14 +11,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LoginPackage implements ReactPackage {
+public class SignUpPackage implements ReactPackage {
     @NonNull
     @Override
-    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
-        List<NativeModule> list = new ArrayList<>();
-        list.add(new MyNativeModules(reactContext));
-        return list;
-    } 
+    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactApplicationContext) {
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new SignUpModule(reactApplicationContext));
+        return modules;
+    }
 
     @NonNull
     @Override

@@ -15,7 +15,8 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
-import com.tuhinh14043.nativemodulereactnative.LoginPackage; // Add this import
+import com.tuhinh14043.nativemodulereactnative.SignUpPackage; 
+
 
 class MainApplication : Application(), ReactApplication {
 
@@ -23,8 +24,8 @@ class MainApplication : Application(), ReactApplication {
       this,
       object : DefaultReactNativeHost(this) {
         override fun getPackages(): List<ReactPackage> =
-            PackageList(this).packages.apply { 
-              add(LoginPackage()); 
+            PackageList(this).packages.apply {
+              add(SignUpPackage())
             }
 
           override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"
