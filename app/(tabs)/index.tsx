@@ -25,18 +25,7 @@ const HomeScreen = () => {
             });
           }}
         >
-          <Text style={styles.buttonText}>Native Login Screen</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.button, styles.button2]}
-          onPress={() => {
-            SignUpModule.openSignUpScreen((name: string, email: string) => {
-              Alert.alert("User Info", `Name: ${name}\nEmail: ${email}`);
-            });
-          }}
-        >
-          <Text style={styles.buttonText}>Native Signup Screen</Text>
+          <Text style={styles.buttonText}>Open Native Login Form</Text>
         </TouchableOpacity>
       </View>
     </View>
